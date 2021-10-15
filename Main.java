@@ -28,14 +28,14 @@ class Main {
       //Calculation
       for(int y = 1;y < columns+1;y++){
         multi[i-1][y-1] = i * y;
-        int sqrt = (int) Math.sqrt(multi[i-1][y-1]);/////////////
-        product = String.valueOf(multi[i-1][y-1]);////////////Integer.toString()
+        int sqrt = (int) Math.sqrt(multi[i-1][y-1]);
 
-        if(sqrt == (int) multi[i-1][y-1]){
-          System.out.printf("%4d%s",ANSI_RED + multi[i-1][y-1] + ANSI_RESET,"|");
+        if(sqrt*sqrt == (int) multi[i-1][y-1]){
+          System.out.print(ANSI_RED + multi[i-1][y-1] + ANSI_RESET);
+          System.out.printf("%4s","|");
         }
         else{
-          System.out.printf("%4d%s",multi[i-1][y-1],"|");
+          System.out.printf("%-4d%s",multi[i-1][y-1],"|");
         }
       }
 
